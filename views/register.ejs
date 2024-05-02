@@ -1,0 +1,98 @@
+<!-- src/views/register.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <style>
+        body {
+            font-family: cursive;
+            background-image: url('/img/19335268_6085949.jpeg');
+            color: #fff;
+
+            backdrop-filter: blur(10px);
+        }
+
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+
+        form {
+            background-image: url(/img/back.jpg);
+            display: grid;
+            max-width: 300px;
+            min-width: 250px;
+            justify-content: center;
+            /* position: absolute; */
+            /* top: 25%;
+            right: 10%; */
+            padding: 30px;
+        }
+
+        .input {
+            margin-bottom: 10px;
+            font-size: 20px;
+            border: 0;
+        }
+
+        .button {
+            padding: 5px;
+            font-size: 18px;
+            background-color: #81beff;
+            border: 0;
+            margin-top: 10px;
+        }
+        a{
+            text-decoration: none;
+            color: #81beff;
+        }
+        #create{
+            margin-top: 10px;
+        }
+        
+        .logo img{
+            width: 40px;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        
+        <form action="/user/register" method="POST">
+            <h1 class="logo"> <img src="/img/list-icon-1423.png" alt="">Tasks</h1>
+            <h1>User Registration</h1>
+            <label for="username">Username:</label>
+            <input type="text" name="username" class="input"  required><br>
+            <label for="email">Email:</label>
+            <input type="email" name="email" class="input"  required><br>
+            <label for="password">Set Password:</label>
+            <input type="password" name="password" id="password" class="input"  required><br>
+            <p><input type="checkbox" name="show password" id="show">Show Password</p>
+            <button type="submit" class="button">Register</button>
+            <label for="login" id="create">Already have account? <a href="/user/login">Login</a></label>
+
+        </form>
+    </div>
+    <script>
+        document.getElementById("show").addEventListener("click", function(){
+            let inputType = document.getElementById("password");
+            if(inputType.type === 'password'){
+                document.getElementById("password").type="text";
+            }else{
+                document.getElementById("password").type="password";
+            }
+        });
+    </script>
+</body>
+
+</html>

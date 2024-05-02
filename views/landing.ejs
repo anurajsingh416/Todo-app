@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        body {
+            font-family: cursive;
+            background-image: url('/img/19335268_6085949.jpeg');
+            color: #fff
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            position: relative;
+            height: 100vh;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 20px;
+            position: relative;
+        }
+
+        .auth-buttons {
+            margin-right: 0;
+        }
+
+        .logo {
+            font-size: 30px;
+            margin-left: 0;
+            background-color: #0000003d;
+            padding: 2px;
+        }
+
+        .signup-button,
+        .login-button,
+        .b1,
+        .b2 {
+            margin-left: 10px;
+        }
+
+        .signup-button {
+            border: 1px solid #fff;
+            padding: 4px;
+            border-radius: 5px;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .b1,
+        .b2 {
+            border: 1px solid #3c32ff;
+            border-radius: 5px;
+            padding: 9px;
+            font-size: 18px;
+            color: #3c32ff;
+            box-shadow: 2px 2px 3px #000, inset 1px 1px 3px #000000;
+        }
+
+        .b2 {
+            background-color: #3c32ff;
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 44px;
+
+        }
+
+        .description>* {
+            display: flex;
+            justify-content: center;
+        }
+
+        .description {
+            position: absolute;
+            top: 35%;
+            left: 0;
+            width: 100%;
+        }
+
+        .logo img {
+            width: 30px;
+        }
+
+        @media screen and (max-width: 500px) {
+            .logo{
+                font-size: 25px;
+            }
+            .logo img {
+                width: 25px;
+            }
+
+            h1 {
+                font-size: 38px;
+            }
+
+            .b1,
+            .b2 {
+                font-size: 16px;
+                padding: 6px;
+            }
+
+            .signup-button,
+            .login-button {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <h1 class="logo"><img src="/img/list-icon-1423.png" alt="">Tasks</h1>
+            <div class="auth-buttons">
+                <a href="/user/register" class="signup-button">Sign Up</a>
+                <a href="/user/login" class="login-button">Login</a>
+            </div>
+        </nav>
+
+        <div class="description">
+            <h1>Tasks,Add Here..</h1>
+            <p>Add your Daily Tasks Here.. <br> and get the Satisfaction</p>
+            <div class="buttons">
+                <a href="/user/login" class="b1">Get Started</a>
+                <a class="b2">Learn more</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
