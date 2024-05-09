@@ -11,9 +11,9 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 
-mongoose.connect('mongodb://localhost:27017/myapp');
+// mongoose.connect('mongodb://localhost:27017/myapp');
 
-// mongoose.connect(process.env.MONGODB_URI);
+mongoose.connect(process.env.MONGODB_URI);
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'Connection error:'));
 db.once('open', function () {
@@ -21,13 +21,12 @@ db.once('open', function () {
 });
 
 const store = new MongoDBStore({
-    // uri : process.env.MONGODB_URI,
-    uri : 'mongodb://localhost:27017/myapp',
+    uri : process.env.MONGODB_URI,
     collection : 'sessions'
 });
 
 store.on('error', function (err) {
-    console.log("Session store error: " + err);
+    // console.log("Session store error: " + err);
 })
 
 app.use(session({
