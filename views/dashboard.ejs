@@ -15,8 +15,9 @@
         }
 
         body {
-            font-family: Verdana, Arial, Helvetica, sans-serif;
-            background-image: url('/img/19335268_6085949.jpeg');
+            font-family: "Montserrat", sans-serif;
+            background: #eee;
+            /* background-image: url('/img/19335268_6085949.jpeg'); */
             color: #fff;
             height: fit-content;
             backdrop-filter: blur(5px);
@@ -24,7 +25,9 @@
 
         
         .container {
-            width: calc(100% - 200px);
+            /* width: calc(100% - 200px); */
+            width: calc(100%);
+            
             position: relative;
             left: 0px;
             right: 0px;
@@ -40,28 +43,34 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0px 20px;
+            padding: 4px 20px;
             width: 100%;
             position: relative;
-            top: 10px;
+            top: 0px;
+            font-family: "McLaren", cursive;
+            background: #f5ba13;
         }
 
         .logo {
             font-size: 30px;
-            background-color: #0000003d;
             padding: 2px;
+            /* position: relative; */
         }
 
         .logo img{
-            width: 35px;
-            margin-bottom: 0px;
+            /* position: absolute; */
+            /* display: block; */
+            width: 30px;
+            height: 22px;
+            /* margin-bottom: 0px; */
         }
         .account{
-            display: none;
+            display: block;
             position: absolute;
             width: 35px;
             right: 80px;
-            top: 5px;
+            top: 11px;
+            bottom: 5px;
         }
 
         .content {
@@ -102,12 +111,12 @@
 
         .content ul li.details {
             margin: 20px 0;
-            background-color: rgb(246, 249, 173);
+            background-color: #fff;
             border-radius: 10px;
             padding: 10px 30px;
             position: relative;
             width: 400px;
-            box-shadow: 2px 2px 6px #9f813a, inset 1px 2px 6px #9f813a;
+            box-shadow: 0px 2px 5px #ccc;
         }
 
         .heading {
@@ -140,10 +149,11 @@
             width: 200px;
             /* width: 15%; */
             position: fixed;
+            display: none;
             top: 0;
             right: 0;
             float: right;
-            background-color: rgba(0, 0, 255, 0.192);
+            background-color: rgba(23, 23, 239);
             padding-top: 20px;
         }
 
@@ -232,14 +242,14 @@
             justify-content: center;
             position: relative;
             border-radius:8px; 
-            background-color: #f8e8b3;
-            box-shadow: 2px 2px 6px #ebcd89, inset 1px 2px 6px #ebcd89;
+            background-color: #fff;
+            box-shadow: 0px 2px 5px #ccc;
         }
 
         #taskFormContainer form>* {
             margin: 1px;
             font-size: 16px;
-            border: 0;
+            border: 1;
         }
         #taskFormContainer form #submit{
             background: green;
@@ -275,10 +285,15 @@
         .profile ul li a:hover {
             color: rgb(109, 104, 180);
         }
+        
         @media screen and (max-width: 900px) {
-
+            
+            .heading{
+                width:160px;
+            }
             .account{
             display: block;
+            top:5px;
             }
             .profile {
                 display: none;
@@ -304,12 +319,12 @@
 
             .content ul li.details {
                 margin: 10px 0;
-                background-color: rgb(246, 249, 173);
+                background: #fff;
                 border-radius: 10px;
                 padding: 5px 15px;
                 position: relative;
                 width: 250px;
-                box-shadow: 2px 2px 6px #9f813a, inset 1px 2px 6px #9f813a;
+                box-shadow: 0px 2px 5px #ccc;
                 font-size: 14px;
             }
 
@@ -325,7 +340,8 @@
             }
 
             .logo img {
-                width: 20px;
+                width: 25px;
+                height: 20;
             }
             #taskFormContainer form>*{
                 font-size: 14px;

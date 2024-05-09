@@ -67,10 +67,13 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById("account").addEventListener("click", function () {
             document.getElementById("profile").style.display = "block";
             document.getElementById("account").style.display = "none";
+            document.getElementsByClassName('container')[0].style.width = "calc(100% - 200px)";
+
         })
         document.getElementById("cancel").addEventListener("click", function () {
             document.getElementById("profile").style.display = "none";
             document.getElementById("account").style.display = "block";
+            document.getElementsByClassName('container')[0].style.width = "100%";
         })
 
         // Add event listeners to the "Pending Tasks" and "Completed Tasks" buttons
