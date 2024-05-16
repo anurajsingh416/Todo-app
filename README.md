@@ -1,6 +1,6 @@
 
-# Project Title
-Todo List App
+# Todo List App
+
 
 Welcome to the Todo App ! This application provides a simple interface for managing your Daily Tasks. 
 Keep tracks of your todos,manages the list of tasks
